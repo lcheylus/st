@@ -2030,7 +2030,7 @@ usage(void)
 	    " [[-e] command [args ...]]\n"
 	    "       %s [-aiv] [-c class] [-f font] [-g geometry]"
 	    " [-n name] [-o file]\n"
-	    "          [-T title] [-t title] [-w windowid] [-z fontsize] -l line"
+	    "          [-T title] [-t title] [-w windowid] []-l line"
 	    " [stty_args ...]\n", argv0, argv0);
 }
 
@@ -2079,7 +2079,7 @@ main(int argc, char *argv[])
 		opt_embed = EARGF(usage());
 		break;
 	case 'v':
-		die("%s " VERSION "\n", argv0);
+		die("%s %s\n", NAME, VERSION);
 		break;
 	case 'z':
 		defaultfontsize = strtod(EARGF(usage()), NULL);
