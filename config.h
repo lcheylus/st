@@ -6,7 +6,9 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 // static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static char *font = "Cousine Nerd Font:pixelsize=12:antialias=true:autohint=true";
+// static char *font = "MartianMono NF Med:pixelsize=11:antialias=true:autohint=true";
+// static char *font = "Cousine Nerd Font:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Cousine Nerd Font:weight=bold:size=12:pixelsize=12:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = { "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true" };
 
@@ -59,6 +61,12 @@ int allowwindowops = 0;
  */
 static double minlatency = 2;
 static double maxlatency = 33;
+
+/*
+ * Synchronized-Update timeout in ms
+ * https://gitlab.com/gnachman/iterm2/-/wikis/synchronized-updates-spec
+ */
+static unsigned int su_timeout = 200;
 
 /*
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
