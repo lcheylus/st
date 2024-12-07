@@ -2673,7 +2673,7 @@ usage(void)
 	    " [[-e] command [args ...]]\n"
 	    "       %s [-aiv] [-c class] [-f font] [-g geometry (cells)] [-G geometry (pixels)]"
 	    " [-n name] [-o file]\n"
-	    "          [-T title] [-t title] [-w windowid] []-l line"
+	    "          [-T title] [-t title] [-w windowid] [-z fontsize] -l line"
 	    " [stty_args ...]\n", argv0, argv0);
 }
 
