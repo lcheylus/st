@@ -167,7 +167,7 @@ static const char *colorname[] = {
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 6;
 
 /*
  * Whether to use pixel geometry or cell geometry
