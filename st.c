@@ -1869,6 +1869,17 @@ tsetmode(int priv, int set, const int *args, int narg)
 			case 2004: /* 2004: bracketed paste mode */
 				xsetmode(set, MODE_BRCKTPASTE);
 				break;
+			case 2026: /* Begin/End synchronized update */
+				if (set == 1) {
+					tsync_begin();
+				} else if (set == 0) {
+					tsync_end();
+				} else {
+					fprintf(stderr,
+						"tsetmode: synchronized update (CSI ? 2026) unknown code set = %d\n",
+						set);
+				}
+				break;
 			/* Not implemented mouse modes. See comments there. */
 			case 1001: /* mouse highlight mode; can hang the
 				      terminal by design when implemented. */
